@@ -11,11 +11,11 @@ export function CardPerson({ cover, avatar, name, office}) {
       <p className={stylePerson.p2}>{office}</p>
 
       <div className={stylePerson.spans}>
-      <span >#Brazilian</span>
-      <span >#JunDev</span>
-      <span >#JunDev</span>
-      <span >#JunDev</span>
-      <span >#JunDev</span>
+      <span >#JavaScript</span>
+      <span >#HTML</span>
+      <span >#CSS</span>
+      <span >#TypeScript</span>
+      <span >#React</span>
       </div>
       
     </div>
