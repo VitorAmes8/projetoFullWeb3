@@ -32,9 +32,9 @@
   border: 2.5px solid var(--color-bg-dark);
   outline: 2.5px solid var(--general-red);
 }
+
 .avatar:hover {box-shadow: 0px 0px 17px 0px var(--general-red);
 }
-
 
 .card .p1 {
   font-style: normal;
