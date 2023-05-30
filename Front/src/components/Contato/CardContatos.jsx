@@ -13,7 +13,6 @@ import styleContato from "./CardContatos.module.css";
     console.log("Deletando o ID: " + cache);
     await server.delete(`user/${cache}`);
   }
-
   }
 
 export async function Update(user) {
@@ -26,16 +25,13 @@ export async function Update(user) {
     const nomeCompleto = `${user.name.first} ${user.name.last}`;
     const avatar = user.picture.large;
     const cell = user.cell;
-    
     await server.put(`user/${cache}`, {
     name: nomeCompleto,
     avatar: avatar,
     celular: cell,
     });
   }
-
   }
-
 
 export function CardContato({  avatar, name, celular, id}) {
 

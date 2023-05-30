@@ -26,7 +26,6 @@ export function Home() {
 
     const resultAPI = await api.get("/");
     const user = resultAPI.data.results[0];
-
     const nomeCompleto = `${user.name.first} ${user.name.last}`;
     const avatar = user.picture.large;
     const cell = user.cell;
@@ -78,7 +77,7 @@ export function Home() {
     <div className={style.container}>
 
       <CardPerson
-        cover="https://images.unsplash.com/photo-1536227661368-deef57acf708?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+        cover="https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&w=1000&q=80"
         avatar="vitinho.png"
         name="Vitor Ames"
         office='Estudante de T.I' />
