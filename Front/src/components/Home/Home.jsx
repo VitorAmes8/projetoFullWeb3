@@ -18,7 +18,7 @@ export function Home() {
   async function Load() {
     const temp = await server.get("user/");
     setPersons(temp.data);
-    console.log({persons});
+
   }
 
   async function Adicionar() {
@@ -59,7 +59,6 @@ export function Home() {
       }
     }))
 
-    console.log({results})
     setPersons(results)
     }
   }

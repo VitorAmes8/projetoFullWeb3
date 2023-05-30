@@ -10,7 +10,7 @@ import styleContato from "./CardContatos.module.css";
   if(cache ===''){
       console.log('Contato não definido')
   }else{
-    console.log("função delete id: " + cache);
+    console.log("Deletando o ID: " + cache);
     await server.delete(`user/${cache}`);
   }
 
@@ -21,7 +21,7 @@ export async function Update(user) {
   if(cache ===''){
       console.log('Contato não definido')
   }else{
-    console.log("função alterar id: " + cache);
+    console.log("Alterando informações do ID: " + cache);
 
     const nomeCompleto = `${user.name.first} ${user.name.last}`;
     const avatar = user.picture.large;
@@ -41,7 +41,7 @@ export function CardContato({  avatar, name, celular, id}) {
 
    function Cache(id) {
     cache = id;
-    console.log("Cache definido para " + cache);
+    console.log("ID de cache agora é: " + cache);
   }
 
   return (
