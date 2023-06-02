@@ -5,6 +5,7 @@ import { BsFillTrash3Fill } from "react-icons/bs";
 import { IoPencil, IoSearchOutline, IoAdd } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { api, server } from "../../api/axios";
+import vitor from "../../assets/vitinho.png";
 
 export function Home() {
 
@@ -16,9 +17,8 @@ export function Home() {
   }, []);
 
   async function Load() {
-    const temp = await server.get("user/");
+    const temp = await server.get("user");
     setPersons(temp.data);
-
   }
 
   async function Adicionar() {
@@ -57,7 +57,6 @@ export function Home() {
         return
       }
     }))
-
     setPersons(results)
     }
   }
@@ -78,21 +77,19 @@ export function Home() {
 
       <CardPerson
         cover="https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHByb2dyYW1taW5nfGVufDB8fDB8fHww&w=1000&q=80"
-        avatar="vitinho.png"
+        avatar = {vitor}
         name="Vitor Ames"
         office='Estudante de T.I' />
 
       <div className={style.contatos}>
         <div className={style.controles}>
           <form >
-
             <div className={style.headerContatos}>
               <h1 className={style.title}>Meus contatos</h1>
               <div className={style.buttons}>
                 <button className={style.button} onClick={Adicionar}> <IoAdd /> </button>
                 <button className={style.button} onClick={Editar}> <IoPencil /> </button>
                 <button className={style.button} onClick={Deletar}> <BsFillTrash3Fill /> </button>
-
               </div>
             </div>
 
@@ -104,21 +101,17 @@ export function Home() {
           </form>
         </div>
 
-        <div className={style.listaContatos}>
-          <div className={style.listaCatalogo}>
-            <div className={style.contatoCatalogo}>
-              {
-                persons.map((person, index) => (
-                  <CardContato key={index}
-                    avatar={person.avatar}
-                    name={person.name}
-                    celular={person.celular}
-                    id={person.id}
-                  />
+        <div className={style.listaCatalogo}>
+          {
+            persons.map((person, index) => (
+              <CardContato key={index}
+                avatar={person.avatar}
+                name={person.name}
+                celular={person.celular}
+                id={person.id}
+              />
                 ))
-              }
-            </div>
-          </div>
+          }
         </div>
       </div>
     </div>

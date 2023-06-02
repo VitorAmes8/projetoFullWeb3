@@ -13,7 +13,7 @@ import styleContato from "./CardContatos.module.css";
     console.log("Deletando o ID: " + cache);
     await server.delete(`user/${cache}`);
   }
-  }
+}
 
 export async function Update(user) {
 
@@ -44,8 +44,8 @@ export function CardContato({  avatar, name, celular, id}) {
     <div className={styleContato.card} onClick={() => {Cache(id)}}>
       <img className={styleContato.avatar} src={avatar} alt="Avatar" />
       <div className={styleContato.contact}>
-      <p className={styleContato.p1}>{name}</p>
-      <p className={styleContato.p2}>{celular}</p>
+        <p className={styleContato.p1}>{name}</p>
+        <p className={styleContato.p2}>{celular}</p>
       </div>
     </div>
   );

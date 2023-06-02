@@ -5,33 +5,35 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  }
+}
+
+.contact{
+  margin-left: 7rem;
+}
 
 .card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   width: 40.6rem;
-  height: 8.4rem;
+  height: 10rem;
   border-radius: 8px;
   border: 0.1px solid rgba(189, 21, 9, 0.747);
   background: #1A1924;
   margin-top: 2rem;
-  justify-content: center;
+  align-items: center;
 }
 
 .card .avatar {
   width: 60px;
   height: 60px;
-  margin-left: 3rem;
   border: 2.5px solid var(--general-red);
   border-width: 1;
   border-radius: 60px;
-  align-self:flex-start;
-  }
+  margin-left: 4rem;
+}
 
 .card .avatar:hover{
-  box-shadow: 0px 0px 17px 0px var(--general-red)
+  box-shadow: 0px 0px 17px 0px var(--general-red);
 }
 
 .card .p1 {
@@ -39,7 +41,6 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 160%;
-  margin-top: -4.6rem;
   color: var(--general-red);
   align-self: center;
 }
@@ -49,8 +50,6 @@
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 160%;
-  
-  margin-top: -0.6rem;
   color: var( --gray-dark);
   align-self:center;
 }
